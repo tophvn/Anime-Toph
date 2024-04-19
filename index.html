@@ -1,14 +1,16 @@
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles/estilo.css">
+    <link rel="stylesheet" href="styles/index.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
         integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <title>Anime Toph | Xem Anime Mới - Miễn Phí</title>
 </head>
+
 
 <body>
     <!--    HEADER    -->
@@ -17,22 +19,70 @@
             <h1><a href="#">ANIME TOPH</a></h1>
         </div>
         <div class="nav">
-            <diV class="search">
+            <div class="search">
                 <div class="icon"></div>
                 <div class="input">
                     <input type="text" id="mysearch" placeholder="Tìm Kiếm...">
                 </div>
-                <span class="clear" onclick="document.getElementById('mysearch').value = '';"></sp>
-            </diV>
+                <span class="clear" onclick="document.getElementById('mysearch').value = '';"></span>
+            </div>
             <div class="nav-list">
                 <ul>
                     <li><a href="#">Xem Ngay</a></li>
                     <li><a href="animes.html">Animes</a></li>
                     <li><a href="emision.html">Đang Phát Sóng</a></li>
+                    <li><a href="#" onclick="openLoginForm()">Login</a></li>
                 </ul>
             </div>
         </div>
     </div>
+
+<!--<div id="loginForm" class="modal">
+    <form class="modal-content animate" action="/action_page.php">
+        <div class="imgcontainer">
+            <span onclick="closeLoginForm()" class="close" title="Close Modal">&times;</span>
+        </div>
+        <div class="container">
+            <label for="uname" style="color: blue"><b>Tài khoản</b></label>
+            <input type="text" placeholder="Nhập tài khoản" name="uname" required>
+
+            <label for="psw" style="color: blue"><b>Mật khẩu</b></label>
+            <input type="password" placeholder="Nhập mật khẩu" name="psw" required>
+
+            <button type="submit">Đăng nhập</button>
+            <label>
+                <input type="checkbox" checked="checked" name="remember"> Ghi nhớ mật khẩu
+            </label>
+        </div>
+        <div class="container" style="background-color:#f1f1f1">
+            <button type="button" onclick="document.getElementById('loginForm').style.display='none'" class="cancelbtn">Hủy</button>
+            <span class="psw" style="color: blue">Quên mật khẩu?<a href="#" </a></span>
+            <span class="register" style="color: blue; cursor: pointer;" onclick="openRegisterForm()"> Đăng ký</span>
+        </div>
+    </form>
+</div>
+
+<div class="content">
+    <div id="registerForm" class="modal">
+        <form class="modal-content animate" action="register.php" method="POST">
+            <div class="imgcontainer">
+                <span onclick="closeRegisterForm()" class="close" title="Close Modal">&times;</span>
+            </div>
+            <div class="container">
+                <label for="username" style="color: blue"><b>Tên đăng nhập</b></label>
+                <input type="text" placeholder="Nhập tên đăng nhập" name="username" required>
+
+                <label for="email" style="color: blue"><b>Email</b></label>
+                <input type="email" placeholder="Nhập email" name="email" required>
+
+                <label for="password" style="color: blue"><b>Mật khẩu</b></label>
+                <input type="password" placeholder="Nhập mật khẩu" name="password" required>
+
+                <button type="submit">Đăng ký</button>
+            </div>
+        </form>
+    </div>
+</div>-->
 
     <!--    VIDEOS MỚI   -->
     <div class="video-section">
@@ -170,11 +220,13 @@
             </div>
             <div class="anime-info">
                 <h2><a href="odd-taxi.html">KEKKAI SENSEN</a></h2>
-                <p>"Một lỗ hổng giữa Trái Đất và Dị Giới đã nứt ra bao quanh thành phố New York, giam giữ 
-                người dân New York cùng những sinh vật từ chiều không gian khác trong một kết giới không 
-                thể xuyên thủng. Họ đã cùng nhau sinh tồn qua nhiều năm, trong một thế giới hỗn loạn nhức 
-                nhối vấn nạn tội phạm chỉ có trong viễn tưởng. Lúc này đây, có kẻ đang toan tính phá vỡ 
-                kết giới, cùng lúc đó một biệt đội siêu năng lực gia cùng nhau ngăn chặn chuyện đó xảy ra."</p>
+                <p>
+                    "Một lỗ hổng giữa Trái Đất và Dị Giới đã nứt ra bao quanh thành phố New York, giam giữ
+                    người dân New York cùng những sinh vật từ chiều không gian khác trong một kết giới không
+                    thể xuyên thủng. Họ đã cùng nhau sinh tồn qua nhiều năm, trong một thế giới hỗn loạn nhức
+                    nhối vấn nạn tội phạm chỉ có trong viễn tưởng. Lúc này đây, có kẻ đang toan tính phá vỡ
+                    kết giới, cùng lúc đó một biệt đội siêu năng lực gia cùng nhau ngăn chặn chuyện đó xảy ra."
+                </p>
                 <div class="list-info">
                     <div <!--style="background-color: rgb(37, 32, 26);" -->
                         <i class="fas fa-film"></i>12 Tập
@@ -205,12 +257,14 @@
             </div>
             <div class="anime-info">
                 <h2><a href="odd-taxi.html">INUYASHIKI</a></h2>
-                <p>Inuyashiki Ichirou cuối cùng cũng đã hết vận may của mình. Dù mới chỉ 58 tuổi, 
-                vẻ ngoài của ông luôn bị người ngoài hiểu nhầm mình là một ông già thảm hại, và vì thế, 
-                ông luôn bị bỏ mặc và không được kính trọng bởi gia đình, mặc dù mọi việc ông làm là 
-                đều vì họ. Chưa những thế, bác sĩ còn báo với ông là ông bị ung thư, và chỉ còn một 
-                chút thời gian ngắn ngủi trên cõi đời. Tưởng như mọi chuyện không gì tệ hơn được, ông 
-                bị một ánh sáng từ trên trời đánh chúng...</p>
+                <p>
+                    Inuyashiki Ichirou cuối cùng cũng đã hết vận may của mình. Dù mới chỉ 58 tuổi,
+                    vẻ ngoài của ông luôn bị người ngoài hiểu nhầm mình là một ông già thảm hại, và vì thế,
+                    ông luôn bị bỏ mặc và không được kính trọng bởi gia đình, mặc dù mọi việc ông làm là
+                    đều vì họ. Chưa những thế, bác sĩ còn báo với ông là ông bị ung thư, và chỉ còn một
+                    chút thời gian ngắn ngủi trên cõi đời. Tưởng như mọi chuyện không gì tệ hơn được, ông
+                    bị một ánh sáng từ trên trời đánh chúng...
+                </p>
                 <div class="list-info">
                     <div <!--style="background-color: rgb(37, 32, 26);" -->
                         <i class="fas fa-film"></i>11 Tập
@@ -420,6 +474,22 @@
         </div>
         <div class="empty-block2"></div>
     </div>
+    <script>
+        function openLoginForm() {
+            document.getElementById("loginForm").style.display = "block";
+        }
+        function closeLoginForm() {
+            document.getElementById("loginForm").style.display = "none";
+        }
+        function openRegisterForm() {
+            var registerForm = document.getElementById("registerForm");
+            registerForm.style.display = "block";
+        }
+        function closeRegisterForm() {
+        document.getElementById('registerForm').style.display = 'none';
+    }
+    </script>
+
 
     <script src="js/img-hover.js"></script>
     <script src="js/searchIcon.js"></script>
