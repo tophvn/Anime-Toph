@@ -484,6 +484,31 @@
         document.getElementById('registerForm').style.display = 'none';
     }
     </script>
+    <script>
+    function search() {
+        // Lấy giá trị của ô tìm kiếm
+        var searchText = document.getElementById("mysearch").value.toLowerCase();
+        
+        // Lặp qua tất cả các tiêu đề anime và ẩn những thẻ không khớp với từ khóa tìm kiếm
+        var animeSections = document.querySelectorAll(".anime-section");
+        animeSections.forEach(function(anime) {
+            var title = anime.querySelector("h2").textContent.toLowerCase();
+            if (title.includes(searchText)) {
+                anime.style.display = "block"; // Hiển thị anime nếu tiêu đề khớp
+            } else {
+                anime.style.display = "none"; // Ẩn anime nếu tiêu đề không khớp
+            }
+        });
+    }
+
+    // Gắn sự kiện khi người dùng nhấn enter trong ô tìm kiếm
+    document.getElementById("mysearch").addEventListener("keyup", function(event) {
+        if (event.keyCode === 13) { // Kiểm tra nếu phím Enter được nhấn
+            search(); // Gọi hàm tìm kiếm
+        }
+    });
+</script>
+
     <script src="js/img-hover.js"></script>
     <script src="js/searchIcon.js"></script>
 </body>
